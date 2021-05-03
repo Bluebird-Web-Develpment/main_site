@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "Bluebird Web Development",
@@ -6,7 +8,7 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "ASqErq8jXU2xXXt2M8H52va-TuE4-1MaWNrdvv_u9xw",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         spaceId: "yhv7dv4zdlxu",
       },
     },
